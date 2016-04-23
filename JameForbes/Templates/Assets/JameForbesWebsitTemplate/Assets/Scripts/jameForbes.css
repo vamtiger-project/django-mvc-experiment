@@ -1,0 +1,76 @@
+/*
+Primary Styling
+*/
+html {
+	background: black;
+	font-family: Georgia, sans-serif;
+	color: white;
+}
+
+body, ul, li, figure {
+	margin: 0;
+	padding: 0;
+}
+/*
+Style Main Timeline Figure
+*/
+body > section:first-of-type /* Timeline figure */
+{
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 0.5em 0.5em;
+}
+
+body > section > figure /* Figures in the timeline */
+{
+	position: absolute;
+	opacity: 1;
+}
+
+body > section > figure:first-of-type /* First figure in the timeline */
+{
+	z-index: 1;
+}
+
+body > section > figure:last-of-type /* Second figure in the timeline */
+{
+	z-index: 0;
+}
+
+body > section > figure > img /* Images in the timeline */
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+body > section:first-of-type > nav:first-of-type > ul:first-of-type > li:last-of-type > ul:first-of-type > li > figure:first-of-type[data-active=true]:hover /* Active menu figure */
+{
+	cursor: not-allowed;
+}
+
+body > section:first-of-type > nav:first-of-type > ul:first-of-type > li:last-of-type > ul:first-of-type > li > figure:first-of-type[data-active=false]:hover, /* Inactive menu figure */
+#menuToggleIconsSvg > #iconSelectionArea /* Menu toggle icon selection area */
+{
+	cursor: pointer;
+}
+
+/*
+Transitions And Transforms
+*/
+body > section > figure /* Figures in the timeline */
+{
+	-webkit-transition: opacity 2s linear;
+	-moz-transition: opacity 2s linear;
+	-o-transition: opacity 2s linear;
+	transition: opacity 2s linear;
+}
+
+body > section > figure > img /* Images in the timeline */
+{
+	-webkit-transition: left 8s linear, top 8s linear;
+	-moz-transition: left 8s linear, top 8s linear;
+	-0-transition: left 8s linear, top 8s linear;
+	transition: left 8s linear, top 8s linear;
+}

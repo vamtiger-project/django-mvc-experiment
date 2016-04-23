@@ -1,0 +1,15 @@
+Title:
+Gig manager for Jamé Forbes
+
+Description:
+Play around with creating a generalized content management system, using friend and independent artist Jamé Forbes.
+
+Play around with using pure javascript to experiment with CSS positioning and transition. Don't use any external libraries or frameworks to gain a firmer grasp of HTML, CSS and Javascript.
+
+Create an alternative database administration interface than Django's default Admin. Django admin is great, but it doesn't really leverage off some of HTML 5's more advanced MVC features.
+
+Allow the user to read, update and delete records from the database.
+
+Play around with various filters for the user to more efficiently manage data.
+
+Allow the user to export a website including gig information as well as being able to export to Exel.

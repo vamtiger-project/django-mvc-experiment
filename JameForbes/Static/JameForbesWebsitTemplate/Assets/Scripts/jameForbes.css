@@ -1,0 +1,140 @@
+/*
+Primary Styling
+*/
+
+h1
+{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: black;
+	font-family: Georgia, sans-serif;
+	color: white;
+}
+
+body, ul, li, figure {
+	margin: 0;
+	padding: 0;
+}
+/*
+Style Main Timeline Figure
+*/
+body > section:first-of-type /* Timeline figure */
+{
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 0.5em 0.5em;
+}
+
+body > section > figure /* Figures in the timeline */
+{
+	position: absolute;
+	opacity: 1;
+}
+
+body > section > figure:first-of-type /* First figure in the timeline */
+{
+	z-index: 1;
+}
+
+body > section > figure:last-of-type /* Second figure in the timeline */
+{
+	z-index: 0;
+}
+
+body > section > figure > img /* Images in the timeline */
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+body > section:first-of-type > nav:first-of-type > ul:first-of-type > li:last-of-type > ul:first-of-type > li > figure:first-of-type[data-active=true]:hover /* Active menu figure */
+{
+	cursor: not-allowed;
+}
+
+body > section:first-of-type > nav:first-of-type > ul:first-of-type > li:last-of-type > ul:first-of-type > li > figure:first-of-type[data-active=false]:hover, /* Inactive menu figure */
+#menuToggleIconsSvg > #iconSelectionArea /* Menu toggle icon selection area */
+{
+	cursor: pointer;
+}
+
+section > section > article:nth-of-type(3) > hgroup, /* Gig info table header */
+section > section > article:nth-of-type(3) > section > table > tbody > tr /* Gig info table rows hover state */
+{
+	background: rgba(0, 0, 0, 0.5);
+}
+
+section > section > article:nth-of-type(3) > hgroup > h1, /* Gig info table headers */
+section > section > article:nth-of-type(3) > section /* Gig info table section */
+{
+	position: absolute;
+	font-size: 1.3em;
+}
+
+section > section > article:nth-of-type(3) > hgroup > h1 /* Gig info table headers */
+{
+	padding: 0.3em 0;
+}
+
+section > section > article:nth-of-type(3) > section > table /* Gig info table */
+{
+	border-collapse: collapse;
+}
+
+section > section > article:nth-of-type(3) > section > table > tbody > tr > td /* Gig info table cells */
+{
+	padding: 0.3em;
+	cursor: all-scroll;
+}
+
+section > section > article:nth-of-type(3) > section > table > tbody > tr > td:nth-of-type(n+2) /* Gig info table second to last cells per row */
+{
+	padding-left: 1em;
+}
+
+section > section > article:nth-of-type(3) > section > table > tbody > tr > td:nth-of-type(2) /* Gig info table second cell per row */
+{
+	text-align: right;
+}
+
+/*
+Behaviour
+*/
+
+section > section > article:nth-of-type(3) > section > table > tbody > tr:hover /* Gig info table rows hover state */
+{
+	background: rgba(255, 255, 255, 0.5);
+	color: black;
+}
+
+/*
+Transitions And Transforms
+*/
+body > section > figure /* Figures in the timeline */
+{
+	-webkit-transition: opacity 2s linear;
+	-moz-transition: opacity 2s linear;
+	-o-transition: opacity 2s linear;
+	transition: opacity 2s linear;
+}
+
+body > section > figure > img /* Images in the timeline */
+{
+	-webkit-transition: left 8s linear, top 8s linear;
+	-moz-transition: left 8s linear, top 8s linear;
+	-0-transition: left 8s linear, top 8s linear;
+	transition: left 8s linear, top 8s linear;
+}
+
+section > section > article:nth-of-type(3) > section > table > tbody > tr /* Gig info table rows hover state */
+{
+	-webkit-transition: background-color 0.4s linear, color 0.4s linear;
+	-moz-transition: background-color 0.4s linear, color 0.4s linear;
+	-0-transition: background-color 0.4s linear, color 0.4s linear;
+	transition: background-color 0.4s linear, color 0.4s linear;
+}
